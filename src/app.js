@@ -178,6 +178,7 @@ app.get('/api/stats/monthly', auth, (req, res) => {
   res.json(rows.map((r) => ({ month: r.month, total: Number(r.total), interview: Number(r.interview) })));
 });
 
+app.get('/', (_req, res) => res.json({ name: 'InternTrack API', status: 'ok', health: '/api/health' }));
 app.use((_req, res) => bad(res, 'Endpoint tidak ditemukan', 404));
 app.use((err, _req, res, _next) => { console.error(err); bad(res, 'Kesalahan server', 500); });
 

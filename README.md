@@ -29,3 +29,6 @@ Variabel lingkungan: lihat `.env.example` (`PORT`, `JWT_SECRET`, `DB_PATH`, `COR
 | PUT, DELETE | /schedules/:id | Ubah / hapus |
 | GET | /stats/summary | Total, per status, rasio wawancara |
 | GET | /stats/monthly | Lamaran per bulan & lanjut wawancara |
+
+## Deploy ke Vercel
+File `api/index.js` dan `vercel.json` sudah disiapkan. Isi `JWT_SECRET` di Environment Variables. Database memakai `/tmp` (sementara, data bisa hilang); untuk data tetap gunakan Render/Railway dengan `Dockerfile`.

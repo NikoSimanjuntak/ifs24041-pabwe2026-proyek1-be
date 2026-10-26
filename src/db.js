@@ -1,6 +1,7 @@
 import { DatabaseSync } from 'node:sqlite';
 
-const db = new DatabaseSync(process.env.DB_PATH || 'intertrack.db');
+const dbPath = process.env.DB_PATH || (process.env.VERCEL ? '/tmp/intertrack.db' : 'intertrack.db');
+const db = new DatabaseSync(dbPath);
 
 db.exec(`
 PRAGMA foreign_keys = ON;

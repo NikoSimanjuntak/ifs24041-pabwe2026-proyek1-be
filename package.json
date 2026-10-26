@@ -9,7 +9,7 @@
     "seed": "node src/seed.js",
     "test": "node --test --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=test-results.xml test/"
   },
-  "engines": { "node": ">=22.5" },
+  "engines": { "node": "22.x" },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
